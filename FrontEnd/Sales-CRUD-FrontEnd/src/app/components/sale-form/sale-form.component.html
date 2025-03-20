@@ -1,0 +1,20 @@
+<h2>Nova Venda</h2>
+<form [formGroup]="saleForm" (ngSubmit)="onSubmit()">
+  <label>
+    Número da Venda:
+    <input type="text" formControlName="saleNumber" required>
+  </label>
+  <label>
+    Data:
+    <input type="date" formControlName="saleDate" required>
+  </label>
+  <label>
+    ID do Cliente:
+    <input type="text" formControlName="customerId" required>
+  </label>
+  <label>
+    ID da Filial:
+    <input type="text" formControlName="branchId" required>
+  </label>
+  <button type="submit">Salvar</button>
+</form>

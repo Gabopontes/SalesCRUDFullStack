@@ -1,0 +1,23 @@
+<h2>Lista de Vendas</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Número da Venda</th>
+      <th>Data</th>
+      <th>Total</th>
+      <th>Status</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let sale of sales">
+      <td>{{ sale.saleNumber }}</td>
+      <td>{{ sale.saleDate | date }}</td>
+      <td>{{ sale.totalAmount | currency }}</td>
+      <td>{{ sale.isCancelled ? 'Cancelada' : 'Ativa' }}</td>
+      <td>
+        <button (click)="cancelSale(sale.id)">Cancelar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
